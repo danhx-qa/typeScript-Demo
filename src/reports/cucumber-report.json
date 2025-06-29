@@ -1,0 +1,210 @@
+[
+  {
+    "description": "As a user I want to verify that Calendar navigation in Events screen",
+    "elements": [
+      {
+        "description": "",
+        "id": "event;user;delete-an-existing-event-successfully",
+        "keyword": "Scenario Outline",
+        "line": 121,
+        "name": "Delete an existing event successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114098899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "Open browser and navigate to the login page",
+            "match": {
+              "location": "src\\steps\\login-step.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2028407299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "The user enter the username \"admin@example.com\" and password \"123456\"",
+            "match": {
+              "location": "src\\steps\\login-step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 123447699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "The user click the login button",
+            "match": {
+              "location": "src\\steps\\login-step.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 853846099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "The user should be logged in and redirected to the dashboard successfully",
+            "match": {
+              "location": "src\\steps\\dashboard-step.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120680200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 110,
+            "name": "The user navigates to the \"Events\" screen",
+            "match": {
+              "location": "src\\steps\\event-step.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1271213800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 111,
+            "name": "The user clicks the Add Event button",
+            "match": {
+              "location": "src\\steps\\event-step.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1004583200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 112,
+            "name": "Enters event information with required field 'Test Event TCS-05','2025-06-20'",
+            "match": {
+              "location": "src\\steps\\event-step.ts:116"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 229665899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 113,
+            "name": "clicks the \" Save\" button",
+            "match": {
+              "location": "src\\steps\\event-step.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 319128999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 114,
+            "name": "The event should be added successfully with 'Test Event TCS-05','2025-06-20'",
+            "match": {
+              "location": "src\\steps\\event-step.ts:107"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1799160200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 115,
+            "name": "The user deletes the event",
+            "match": {
+              "location": "src\\steps\\event-step.ts:145"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 527515500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 116,
+            "name": "The event titled '2025-06-20' should no longer be visible",
+            "match": {
+              "location": "src\\steps\\event-step.ts:156"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 893097000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 117,
+            "name": "A yellow success message 'The event has been deleted.' should be displayed",
+            "match": {
+              "location": "src\\steps\\event-step.ts:151"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5408900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 30253699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@event-feature",
+            "line": 1
+          },
+          {
+            "name": "@tcs-08",
+            "line": 108
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "event",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Event",
+    "tags": [
+      {
+        "name": "@event-feature",
+        "line": 1
+      }
+    ],
+    "uri": "src\\features\\event.feature"
+  }
+]
