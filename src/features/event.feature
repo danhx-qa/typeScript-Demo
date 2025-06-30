@@ -3,18 +3,22 @@ Feature: Event
 As a user I want to verify that Calendar navigation in Events screen
 
   Rule: User
+    #Precondition of testcase
 
     Background:
       Given Open browser and navigate to the login page
       When The user enter the username "admin@example.com" and password "123456"
       And The user click the login button
       Then The user should be logged in and redirected to the dashboard successfully
+    #Tag dùng để phân biệt sau này muốn run testcase dựa vào tag đã gán cho Scenario
 
     @tcs-01A
     Scenario Outline: Navigate to next weeks and return to today
       Given The user navigates to the "Events" screen
       When The user clicks the '<typeButton>' button more than '<times>' times
       Then The calendar should display the correct '<typeButton>' month <times> with format "MMMM YYYY"
+        #Data test, mỗi row sẽ tương đương với 1 case (Rất phù hợp với các case validation data)
+        #Data input theo title row
 
       Examples:
         | typeButton | times |
@@ -58,7 +62,7 @@ As a user I want to verify that Calendar navigation in Events screen
         | Test Event TCS-03 | 2025-06-30 | Test Description |   7:00 AM | 2025-06-30 | 9:00 PM | 212 Hai Chau, Da Nang |       | OpenAI | Only me    |
 
     @tcs-04
-    Scenario Outline: User adds a new event on the last day of the current month
+    Scenario Outline: User input on the required field
       Given The user navigates to the "Events" screen
       When The user clicks the Add Event button
       Then The Add Event modal should be "Add event" title displayed
@@ -74,8 +78,8 @@ As a user I want to verify that Calendar navigation in Events screen
       Then The event should be added successfully with '<title>','<startDate>'
 
       Examples:
-        | title             | startDate  |
-        | Test Event TCS-05 | 2025-06-20 |
+        | title              | startDate  |
+        | Test Event TCS-05A | 2025-06-20 |
 
     @tcs-05B
     Scenario Outline: Add new event successfully with all field
@@ -86,8 +90,8 @@ As a user I want to verify that Calendar navigation in Events screen
       Then The event should be added successfully with '<title>','<startDate>','<description>','<startTime>','<endDate>','<endTime>','<location>','<label>','<client>','<sharedWith>'
 
       Examples:
-        | title      | startDate  | description      | startTime | endDate    | endTime | location              | label | client | sharedWith |
-        | Test Event | 2025-06-20 | Test Description |   7:00 AM | 2025-06-30 | 9:00 PM | 212 Hai Chau, Da Nang |       | OpenAI | Only me    |
+        | title              | startDate  | description      | startTime | endDate    | endTime | location              | label | client | sharedWith |
+        | Test Event TCS-05B | 2025-06-25 | Test Description |   7:00 AM | 2025-06-30 | 9:00 PM | 212 Hai Chau, Da Nang |       | OpenAI | Only me    |
 
     @tcs-06
     Scenario Outline: Add Event modal cannot be closed by clicking outside
@@ -118,4 +122,4 @@ As a user I want to verify that Calendar navigation in Events screen
 
       Examples:
         | title             | startDate  | message                     |
-        | Test Event TCS-05 | 2025-06-22 | The event has been deleted. |
+        | Test Event TCS-08 | 2025-06-22 | The event has been deleted. |

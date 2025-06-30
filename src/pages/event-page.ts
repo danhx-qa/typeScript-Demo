@@ -208,8 +208,8 @@ export class EventPage extends LeftSidebarMenu {
 	private CHILD_CLIENT_LOCATOR = `//div[@id='select2-drop']//li//div`;
 	private ADD_EVENT_BUTTON = `a[class='btn btn-default add-btn']`;
 	private ADD_EVENT_MODAL = '#ajaxModalTitle';
-	private LAST_DAY_OF_MONTH_AT_CALENDER = `td[data-date='${this.lastDayOfMonth}']`;
-	private CURRENT_DAY_OF_MONTH_AT_CALENDER = `td[data-date='${this.currentDayOfMonth}']`;
+	private LAST_DAY_OF_MONTH_AT_CALENDER = `td[data-date='${this.lastDayOfMonth}'] div a[class='fc-daygrid-day-number']`;
+	private CURRENT_DAY_OF_MONTH_AT_CALENDER = `td[data-date='${this.currentDayOfMonth}'] div a[class='fc-daygrid-day-number']`;
 	private TITLE_AT_CALENDER = '.fc-toolbar-title';
 	private REPEAT_CHECKBOX = 'input#event_recurring';
 	private EVENT_DETAIL_MODEL = '#ajaxModalTitle';
