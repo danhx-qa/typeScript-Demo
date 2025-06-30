@@ -181,8 +181,8 @@ export class EventPage extends LeftSidebarMenu {
 				break;
 
 			case 'week': {
-				const start = dayjs().startOf('week').format('MMM D');
-				const end = dayjs().endOf('week').format(formatStr);
+				const start = dayjs().startOf('week').format(formatStr);
+				const end = dayjs().endOf('week').format('MMM D, YYYY');
 				expectedText = `${start} – ${end}`;
 				break;
 			}

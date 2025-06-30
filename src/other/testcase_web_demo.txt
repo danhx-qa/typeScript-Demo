@@ -1,0 +1,69 @@
+ID: 1
+Feature: Events
+Description:
+1. Chuyển sang màn hình Events
+2. Nhấn vào nút < và >
+3. Nhấn vào nút > 3 lần, sau đó nhấn nút Today
+Expected:
+1. Xác minh rằng calendar chuyển sang tháng kế tiếp đúng
+2. Lịch trình chuyển về ngày hiện tại, ngày hiện tại hiển thị màu đúng
+--------------------------------------------------
+ID: 2
+Feature: Events
+Description:
+1. Chuyển sang màn hình Events
+2. Nhấn nút week
+3. Nhấn nút day
+4. Nhấn nút month
+Expected:
+1, 2, 3: Lịch trình sẽ thay đổi theo phương thức đã chọn
+--------------------------------------------------
+ID: 3
+Feature: Events
+Description:
+1. Chọn vào ngày cuối cùng của tháng hiện tại
+2. Nhập tất cả thông tin để Add event
+Expected:
+1. Xác nhận một modal Add event hiển thị
+2. Xác nhận event được add thành công
+--------------------------------------------------
+ID: 4
+Feature: Events
+Description:
+1. Nhấn vào nút Add event
+2. Không nhập bất cứ thông tin nào, nhấn nút Save
+Expected:
+1. Xác nhận modal Add event hiển thị
+2. Xác nhận hiển thị thông báo lỗi ở các mục: title, start date, end date
+--------------------------------------------------
+ID: 5
+Feature: Events
+Description:
+1. Nhấn vào nút Add event
+2. Chỉ nhập các thông tin yêu cầu, nhấn nút Save
+Expected:
+1. Xác nhận event được add thành công
+--------------------------------------------------
+ID: 6
+Feature: Events
+Description:
+1. Chọn vào ngày hiện tại để mở modal Add event
+2. Nhấn ngoài modal
+Expected:
+Modal không thể đóng
+--------------------------------------------------
+ID: 7
+Feature: Events
+Description:
+1. Chọn vào ngày hiện tại để mở modal Add event
+2. Nhấn nút Close
+Expected:
+Modal đóng
+--------------------------------------------------
+ID: 8
+Feature: Events
+Description:
+1. Xóa event đã add
+Expected:
+1. Xác nhận xóa thành công
+2. Hiển thị thông báo "The event has been deleted." màu vàng

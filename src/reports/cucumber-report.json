@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "event;user;delete-an-existing-event-successfully",
+        "id": "event;user;navigate-to-next-weeks-and-return-to-today",
         "keyword": "Scenario Outline",
-        "line": 121,
-        "name": "Delete an existing event successfully",
+        "line": 43,
+        "name": "Navigate to next weeks and return to today",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 114098899
+              "duration": 142379799
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2028407299
+              "duration": 2449615299
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 123447699
+              "duration": 168875100
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 853846099
+              "duration": 867153900
             }
           },
           {
@@ -66,111 +66,46 @@
             },
             "result": {
               "status": "passed",
-              "duration": 120680200
+              "duration": 188687899
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 110,
+            "line": 37,
             "name": "The user navigates to the \"Events\" screen",
             "match": {
               "location": "src\\steps\\event-step.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 1271213800
+              "duration": 728260899
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 111,
-            "name": "The user clicks the Add Event button",
-            "match": {
-              "location": "src\\steps\\event-step.ts:43"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1004583200
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 112,
-            "name": "Enters event information with required field 'Test Event TCS-05','2025-06-20'",
-            "match": {
-              "location": "src\\steps\\event-step.ts:116"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 229665899
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 113,
-            "name": "clicks the \" Save\" button",
+            "line": 38,
+            "name": "clicks the 'week' button",
             "match": {
               "location": "src\\steps\\event-step.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 319128999
+              "duration": 1113940499
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 114,
-            "name": "The event should be added successfully with 'Test Event TCS-05','2025-06-20'",
+            "line": 39,
+            "name": "The calendar should display the correct 'week' month 0 with format 'MMM D'",
             "match": {
-              "location": "src\\steps\\event-step.ts:107"
+              "location": "src\\steps\\event-step.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 1799160200
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 115,
-            "name": "The user deletes the event",
-            "match": {
-              "location": "src\\steps\\event-step.ts:145"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 527515500
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 116,
-            "name": "The event titled '2025-06-20' should no longer be visible",
-            "match": {
-              "location": "src\\steps\\event-step.ts:156"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 893097000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 117,
-            "name": "A yellow success message 'The event has been deleted.' should be displayed",
-            "match": {
-              "location": "src\\steps\\event-step.ts:151"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5408900
+              "duration": 17919499
             }
           },
           {
@@ -178,7 +113,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 30253699
+              "duration": 53136700
             }
           }
         ],
@@ -188,8 +123,274 @@
             "line": 1
           },
           {
-            "name": "@tcs-08",
-            "line": 108
+            "name": "@ignore",
+            "line": 35
+          },
+          {
+            "name": "@tcs-02",
+            "line": 35
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "event;user;navigate-to-next-weeks-and-return-to-today",
+        "keyword": "Scenario Outline",
+        "line": 44,
+        "name": "Navigate to next weeks and return to today",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 167677799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "Open browser and navigate to the login page",
+            "match": {
+              "location": "src\\steps\\login-step.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2345375399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "The user enter the username \"admin@example.com\" and password \"123456\"",
+            "match": {
+              "location": "src\\steps\\login-step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 146632200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "The user click the login button",
+            "match": {
+              "location": "src\\steps\\login-step.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 845314899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "The user should be logged in and redirected to the dashboard successfully",
+            "match": {
+              "location": "src\\steps\\dashboard-step.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 190457000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 37,
+            "name": "The user navigates to the \"Events\" screen",
+            "match": {
+              "location": "src\\steps\\event-step.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 920215800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "clicks the 'day' button",
+            "match": {
+              "location": "src\\steps\\event-step.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1135334899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "The calendar should display the correct 'day' month 0 with format 'MMMM D, YYYY'",
+            "match": {
+              "location": "src\\steps\\event-step.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14818600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 50944400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@event-feature",
+            "line": 1
+          },
+          {
+            "name": "@ignore",
+            "line": 35
+          },
+          {
+            "name": "@tcs-02",
+            "line": 35
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "event;user;navigate-to-next-weeks-and-return-to-today",
+        "keyword": "Scenario Outline",
+        "line": 45,
+        "name": "Navigate to next weeks and return to today",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 152782000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "Open browser and navigate to the login page",
+            "match": {
+              "location": "src\\steps\\login-step.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2315124200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "The user enter the username \"admin@example.com\" and password \"123456\"",
+            "match": {
+              "location": "src\\steps\\login-step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 183758100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "The user click the login button",
+            "match": {
+              "location": "src\\steps\\login-step.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 864488100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "The user should be logged in and redirected to the dashboard successfully",
+            "match": {
+              "location": "src\\steps\\dashboard-step.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 174578099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 37,
+            "name": "The user navigates to the \"Events\" screen",
+            "match": {
+              "location": "src\\steps\\event-step.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 660079200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "clicks the 'month' button",
+            "match": {
+              "location": "src\\steps\\event-step.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1087320299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "The calendar should display the correct 'month' month 0 with format 'MMMM YYYY'",
+            "match": {
+              "location": "src\\steps\\event-step.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12034999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 44061599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@event-feature",
+            "line": 1
+          },
+          {
+            "name": "@ignore",
+            "line": 35
+          },
+          {
+            "name": "@tcs-02",
+            "line": 35
           }
         ],
         "type": "scenario"

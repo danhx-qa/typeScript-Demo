@@ -10,7 +10,7 @@ As a user I want to verify that Calendar navigation in Events screen
       And The user click the login button
       Then The user should be logged in and redirected to the dashboard successfully
 
-    @ignore @tcs-01A
+    @tcs-01A
     Scenario Outline: Navigate to next weeks and return to today
       Given The user navigates to the "Events" screen
       When The user clicks the '<typeButton>' button more than '<times>' times
@@ -21,7 +21,7 @@ As a user I want to verify that Calendar navigation in Events screen
         | next       |     1 |
         | prev       |     1 |
 
-    @ignore @tcs-01B
+    @tcs-01B
     Scenario Outline: Navigate to next weeks and return to today
       Given The user navigates to the "Events" screen
       When The user clicks the '<typeButton>' button more than '<times>' times
@@ -32,7 +32,7 @@ As a user I want to verify that Calendar navigation in Events screen
         | typeButton | times |
         | next       |     3 |
 
-    @ignore @tcs-02
+    @tcs-02
     Scenario Outline: Navigate to next weeks and return to today
       Given The user navigates to the "Events" screen
       When clicks the '<groupButton>' button
@@ -40,11 +40,11 @@ As a user I want to verify that Calendar navigation in Events screen
 
       Examples:
         | groupButton | formatDate   |
-        | week        | D, YYYY      |
+        | week        | MMM D        |
         | day         | MMMM D, YYYY |
         | month       | MMMM YYYY    |
 
-    @ignore @tcs-03
+    @tcs-03
     Scenario Outline: User adds a new event on the last day of the current month
       Given The user navigates to the "Events" screen
       When The user selects the last day of the current month
@@ -57,7 +57,7 @@ As a user I want to verify that Calendar navigation in Events screen
         | title             | startDate  | description      | startTime | endDate    | endTime | location              | label | client | sharedWith |
         | Test Event TCS-03 | 2025-06-30 | Test Description |   7:00 AM | 2025-06-30 | 9:00 PM | 212 Hai Chau, Da Nang |       | OpenAI | Only me    |
 
-    @ignore @tcs-04
+    @tcs-04
     Scenario Outline: User adds a new event on the last day of the current month
       Given The user navigates to the "Events" screen
       When The user clicks the Add Event button
@@ -65,7 +65,7 @@ As a user I want to verify that Calendar navigation in Events screen
       When clicks the " Save" button
       Then The validation error message should be displayed for the "This field is required." field
 
-    @ignore @tcs-05A
+    @tcs-05A
     Scenario Outline: Add new event successfully with required field
       Given The user navigates to the "Events" screen
       When The user clicks the Add Event button
@@ -77,7 +77,7 @@ As a user I want to verify that Calendar navigation in Events screen
         | title             | startDate  |
         | Test Event TCS-05 | 2025-06-20 |
 
-    @ignore @tcs-05B
+    @tcs-05B
     Scenario Outline: Add new event successfully with all field
       Given The user navigates to the "Events" screen
       When The user clicks the Add Event button
@@ -89,7 +89,7 @@ As a user I want to verify that Calendar navigation in Events screen
         | title      | startDate  | description      | startTime | endDate    | endTime | location              | label | client | sharedWith |
         | Test Event | 2025-06-20 | Test Description |   7:00 AM | 2025-06-30 | 9:00 PM | 212 Hai Chau, Da Nang |       | OpenAI | Only me    |
 
-    @ignore @tcs-06
+    @tcs-06
     Scenario Outline: Add Event modal cannot be closed by clicking outside
       Given The user navigates to the "Events" screen
       When The user selects the current day of the current month
@@ -97,7 +97,7 @@ As a user I want to verify that Calendar navigation in Events screen
       When The user clicks outside the Add Event modal
       Then The Add Event modal should be "Add event" title displayed
 
-    @ignore @tcs-07
+    @tcs-07
     Scenario Outline: Add Event modal should close when clicking the Close button
       Given The user navigates to the "Events" screen
       When The user selects the current day of the current month
@@ -118,4 +118,4 @@ As a user I want to verify that Calendar navigation in Events screen
 
       Examples:
         | title             | startDate  | message                     |
-        | Test Event TCS-05 | 2025-06-20 | The event has been deleted. |
+        | Test Event TCS-05 | 2025-06-22 | The event has been deleted. |
