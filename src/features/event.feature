@@ -3,22 +3,18 @@ Feature: Event
 As a user I want to verify that Calendar navigation in Events screen
 
   Rule: User
-    #Precondition of testcase
 
     Background:
       Given Open browser and navigate to the login page
       When The user enter the username "admin@example.com" and password "123456"
       And The user click the login button
       Then The user should be logged in and redirected to the dashboard successfully
-    #Tag dùng để phân biệt sau này muốn run testcase dựa vào tag đã gán cho Scenario
 
     @tcs-01A
     Scenario Outline: Navigate to next weeks and return to today
       Given The user navigates to the "Events" screen
       When The user clicks the '<typeButton>' button more than '<times>' times
       Then The calendar should display the correct '<typeButton>' month <times> with format "MMMM YYYY"
-        #Data test, mỗi row sẽ tương đương với 1 case (Rất phù hợp với các case validation data)
-        #Data input theo title row
 
       Examples:
         | typeButton | times |
@@ -52,7 +48,7 @@ As a user I want to verify that Calendar navigation in Events screen
     Scenario Outline: User adds a new event on the last day of the current month
       Given The user navigates to the "Events" screen
       When The user selects the last day of the current month
-      Then The Add Event modal should be "Add event" title displayed
+      Then The Add Event modal should be "Add events" title displayed
       When Enters event information with '<title>','<startDate>','<description>','<startTime>','<endDate>','<endTime>','<location>','<label>','<client>','<sharedWith>'
       And clicks the " Save" button
       Then The event should be added successfully with '<title>','<startDate>','<description>','<startTime>','<endDate>','<endTime>','<location>','<label>','<client>','<sharedWith>'

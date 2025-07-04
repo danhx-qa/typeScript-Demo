@@ -205,7 +205,7 @@ export class EventPage extends LeftSidebarMenu {
 	lastDayOfMonth = this.basePage.getFormattedDateTime('YYYY-MM-DD', { lastDayOfMonth: true });
 	currentDayOfMonth = this.basePage.getFormattedDateTime('YYYY-MM-DD', { lastDayOfMonth: false });
 	private PARENT_CLIENT_LOCATOR = `div[id='s2id_clients_dropdown']`;
-	private CHILD_CLIENT_LOCATOR = `//div[@id='select2-drop']//li//div`;
+	private CHILD_CLIENT_LOCATOR = `div[id='select2-drop'] li div`;
 	private ADD_EVENT_BUTTON = `a[class='btn btn-default add-btn']`;
 	private ADD_EVENT_MODAL = '#ajaxModalTitle';
 	private LAST_DAY_OF_MONTH_AT_CALENDER = `td[data-date='${this.lastDayOfMonth}'] div a[class='fc-daygrid-day-number']`;

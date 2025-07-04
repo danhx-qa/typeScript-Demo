@@ -21,6 +21,7 @@ Then(
 	async (typeButton: string, timesClick: number, formatStr: string) => {
 		const eventPage = new EventPage();
 		await eventPage.isCalendarMonthCorrect(formatStr, timesClick, typeButton);
+		await eventPage.waitForLoadTimeout(5);
 	}
 );
 
